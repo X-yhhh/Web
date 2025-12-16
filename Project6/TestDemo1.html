@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>学员档案</title>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+}
+#container{
+	width:1024px;
+	height:863px;
+	margin:0 auto;
+	background:url(images/bg.png);
+}
+#main{
+	width:500px;
+	margin:0 auto;
+	padding-top:188px;
+	
+}
+#main h2{
+	text-align:center;
+	margin-bottom:50px;
+}
+#main p{
+	
+	height:28px;
+	background-color:#FFF;
+	margin-top:20px;
+	padding:2px;
+	line-height:28px;
+	font-size:14px;
+}
+input.username{
+	width:462px;
+	height:28px;
+	border:0;
+	background:url(images/icon2.png);
+	background-position:4px;
+	background-repeat:no-repeat;
+	line-height:28px;
+	padding-left:32px;
+}
+input.userage{
+	width:462px;
+	height:28px;
+	border:0;
+	background:url(images/icon3.png);
+	background-position:4px;
+	background-repeat:no-repeat;
+	line-height:28px;
+	padding-left:32px;
+}
+
+::placeholder {
+    color: #CCCCCC; 
+    opacity: 1; 
+}
+
+textarea::placeholder {
+    color: #CCCCCC;
+    text-align: left;
+    vertical-align: top;
+}
+
+.userselect input{
+	margin-left:20px;
+	margin-right:10px;
+}
+.userlist{
+	width:160px;
+	height:28px;
+}
+.userwages input{
+	width:160px;
+	height:28px;
+}
+</style>
+</head>
+<body>
+<div id="container">
+	<form action="" method="" name="myForm">
+    <div id="main">
+    	<h2>传智播客学员档案</h2>
+    	<p><input type="text" class="username" placeholder="请输入学员姓名" ></p>
+        <p><input type="text" class="userage" placeholder="请填写实际年龄" ></p>
+        <p class="userselect">
+        	<input type="radio"  name="usersex" >男
+            <input type="radio" name="usersex" >女
+        </p>
+        <p class="userselect">
+        	<input type="checkbox" >老学员
+            <input type="checkbox" >朋友推荐
+            <input type="checkbox" >CSDN论坛
+        </p>
+        <p style="width:160px;">
+        <select class="userlist">
+            <option>网页设计基础班</option>
+            <option>PHP基础班</option>
+            <option>Vue.js基础班</option>
+        </select>
+        </p>
+        <p style="width:300px; background-color:#000" >
+        	<input type="text"  placeholder="工作薪资">
+            <span style="color: #FFF;">元/月（收入）</span>
+        </p>
+		<br>
+          <textarea style="width: 510px; height: 80px; padding: 5px; box-sizing: border-box;" placeholder="请简述您有没有基础，以及为什么选择来传智播客学习？"></textarea>
+		<br>
+		<br>
+		<button type="submit" style="width: 500px; background-color: rgb(248, 79, 79);">提交</button>
+    </div>
+    </form>
+</div>
+</body>
+</html>

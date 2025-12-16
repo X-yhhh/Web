@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选择题</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .paper-container {
+      width: 100%;
+      max-width: 400px;
+      background-image: url('images/bg1.png');
+      background-size: cover;
+      background-position: center;
+      padding: 60px 70px 40px;
+      box-sizing: border-box;
+    }
+
+    .question {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .question:last-child {
+      margin-bottom: 0;
+    }
+
+    .question-num {
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .question-content {
+      flex: 1;
+    }
+
+    .question-text {
+      font-family: 'SimSun', serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      margin: 0 0 10px 0;
+    }
+
+    .options-form {
+      margin: 0;
+      padding: 0;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      cursor: pointer;
+      font-family: 'SimSun', serif;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .option input {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+      accent-color: #666;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="paper-container">
+    <!-- 第一题 -->
+    <div class="question">
+      <img src="images/num1.png" alt="01" class="question-num">
+      <div class="question-content">
+        <p class="question-text">渔夫逮到一条美人鱼却把它放了，这是为什么（ ）？(单选)</p>
+        <form class="options-form">
+          <label class="option">
+            <input type="radio" name="q1" value="a">渔夫很善良
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="b">养不起美人鱼
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="c">违反野生动物保护法
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="d">你懂得
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <!-- 第二题 -->
+    <div class="question">
+      <img src="images/num2.png" alt="02" class="question-num">
+      <div class="question-content">
+        <p class="question-text">在华容道上，关羽为什么没有杀曹操（ ）？(多选)</p>
+        <form class="options-form">
+          <label class="option">
+            <input type="checkbox" name="q2[]" value="a">因为爱情
+          </label>
+          <label class="option">
+            <input type="checkbox" name="q2[]" value="b">曹操对关羽有恩
+          </label>
+          <label class="option">
+            <input type="checkbox" name="q2[]" value="c">关羽不喜欢杀生
+          </label>
+          <label class="option">
+            <input type="checkbox" name="q2[]" value="d">酒喝多了
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
