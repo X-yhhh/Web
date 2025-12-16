@@ -1,0 +1,11 @@
+# Ignore all Microsoft Word documents
+*.doc
+*.docx
+*.dot
+*.dotx
+*.docm
+
+# Optional: ignore other temporary files
+Thumbs.db
+.DS_Store
+*.zip
