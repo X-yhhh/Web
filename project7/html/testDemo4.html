@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>违停查询界面</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      width: 800px;
+      height: 500px;
+      margin: 50px auto;
+      background-color: #1a2a3a;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      font-family: "Microsoft YaHei", sans-serif;
+    }
+    .map-section {
+      width: 40%;
+      height: 100%;
+      left: 100px;
+      float: left;
+      position: relative;
+      background-image: url(../images/road.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    .marker {
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 50px;
+      background-image: url(../images/icon7.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      text-decoration: none;
+    }
+    .pos-1 { top: 70px; left: 90px; }
+    .pos-2 { top: 30px; left: 215px; }
+    .pos-3 { top: 250px; left: 270px; }
+    .pos-big {
+      width: 80px;
+      height: 100px;
+      bottom: 100px;
+      left: -30px;
+      background-image: url(../images/icon2.png);
+    }
+    .marker:hover {
+      transform: scale(1.2);
+      filter: brightness(1.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .info-section {
+      width: 40%;
+      height: 100%;
+      float: right;
+      padding-top: 100px;
+      text-align: center;
+      color: #fff;
+    }
+    .info-section h1 {
+      font-size: 64px;
+      color: #4eaecf;
+      letter-spacing: 5px;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    .info-section p {
+      font-size: 16px;
+      color: #8899a6;
+      margin-bottom: 50px;
+    }
+    .car-image {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="map-section">
+      <a href="#" class="marker pos-1" title="违停点1"></a>
+      <a href="#" class="marker pos-2" title="违停点2"></a>
+      <a href="#" class="marker pos-3" title="违停点3"></a>
+      <a href="#" class="marker pos-big" title="主要违停区域"></a>
+    </div>
+    <div class="info-section">
+      <h1>查 违</h1>
+      <p>及时、迅速、精准、便捷</p>
+      <img src="../images/car.png" alt="警车" class="car-image">
+    </div>
+  </div>
+</body>
+</html>

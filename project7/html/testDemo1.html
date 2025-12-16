@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #eef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* 外壳容器 */
+        .phone-wrapper {
+            position: relative;
+            width: 360px; 
+            font-size: 0; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-radius: 50px; 
+        }
+
+        
+        .bg-img {
+            width: 100%;
+            display: block;
+            pointer-events: none; 
+        }
+
+        /*  屏幕面板 (核心区域) */
+        .screen-panel {
+            position: absolute;
+            
+            /* 
+               定位参数
+               百分比根据通用手机模型估算的。
+            */
+            top: 15.5%;    /* 顶部距离 */
+            left: 7%;      /* 左侧距离 */
+            right: 7%;     /* 右侧距离 (控制宽度) */
+            bottom: 13%;   /* 底部距离 (控制高度) */
+            
+            background: #fff;
+            overflow: scroll; /* 强制显示滚动条 */
+            
+            border-radius: 2px; 
+        }
+
+        .screen-panel::-webkit-scrollbar {
+            width: 14px;  
+            height: 14px; 
+        }
+
+        
+        .screen-panel::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+            border-left: 1px solid #e0e0e0; 
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .screen-panel::-webkit-scrollbar-thumb {
+            background: #c1c1c1; 
+            border: 1px solid #a8a8a8; 
+        }
+
+        .screen-panel::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        .screen-panel::-webkit-scrollbar-corner {
+            background: #f1f1f1;
+        }
+
+        .content-img {
+            display: block;
+            width: auto;  
+            height: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-wrapper">
+        <img src="../images/bg.png" class="bg-img" alt="手机外壳">
+
+        <div class="screen-panel">
+            <img src="../images/content.jpg" class="content-img" alt="页面内容">
+        </div>
+    </div>
+
+</body>
+</html>

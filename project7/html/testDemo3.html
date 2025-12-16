@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>世界杯梦幻阵容</title>
+    <style>
+        /* CSS样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        /* 最外层的大容器 div  */
+        .container {
+            width: 1200px; /* 设置总宽度 */
+            margin: 0 auto;
+        }
+
+        /* --- 顶部区域 --- */
+        .top-section {
+            display: flex;
+            justify-content: space-between; /* 左右两端对齐 */
+            align-items: flex-end; /* 底部对齐，让Logo和文字在视觉上协调 */
+            margin-bottom: 50px; /* 与下方球员列表的间距 */
+            padding: 0 20px;
+        }
+
+        /* 左侧 Logo 区域  */
+        .logo-box {
+            font-size: 0; /* 消除图片底部默认间隙 */
+        }
+        
+        .logo-box img {
+            height: 120px; /* 根据实际图片调整大小 */
+        }
+
+        /* 右侧标题区域  */
+        .title-box {
+            font-size: 0;
+        }
+
+        .title-box img {
+            height: 80px; /* 根据实际图片调整大小 */
+        }
+
+        /* --- 底部球员列表区域  --- */
+        .player-list {
+            list-style: none; /* 去掉列表默认的小圆点 */
+            display: flex;
+            justify-content: space-between; /* 5个li平均分布 */
+        }
+
+        /* 每一个球员卡片*/
+        .player-list li {
+            text-align: center; /* 让图片和文字居中 */
+            width: 18%; /* 5个元素，每个大约占20%，留点空隙设为18% */
+        }
+
+        /* 球员图片 */
+        .player-list li img {
+            width: 100%; /* 图片自适应li的宽度 */
+            max-width: 180px; /* 限制最大宽度，防止图片过大 */
+            height: auto;
+            transition: transform 0.3s; /* 添加一个简单的鼠标悬浮动画效果 */
+        }
+        
+        .player-list li img:hover {
+            transform: scale(1.1); /* 鼠标放上去稍微放大 */
+        }
+
+        .player-list li p {
+            margin-top: 15px;
+            font-size: 20px;
+            color: #333;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 最外层的 div -->
+    <div class="container">
+
+        <!-- 顶部区域：包含 h1 和 div -->
+        <div class="top-section">
+            <!-- 左侧：h1 标签 -->
+            <h1 class="logo-box">
+                <img src="../images/logo.png" alt="FIFA World Cup Brasil">
+            </h1>
+
+            <!-- 右侧：div 标签 -->
+            <div class="title-box">
+                <img src="../images/title.png" alt="世界杯梦幻阵容">
+            </div>
+        </div>
+
+        <!-- 底部区域：ul 标签 -->
+        <ul class="player-list">
+            <li>
+                <img src="../images/people1.png" alt="C罗">
+                <p>球员1</p>
+            </li>
+            
+            <li>
+                <img src="../images/people2.png" alt="梅西">
+                <p>球员2</p>
+            </li>
+
+            <li>
+                <img src="../images/people3.png" alt="内马尔">
+                <p>球员3</p>
+            </li>
+
+            <li>
+                <img src="../images/people3.png" alt="里贝里">
+                <p>球员4</p>
+            </li>
+
+            <li>
+                <img src="../images/people5.png" alt="德罗巴">
+                <p>球员5</p>
+            </li>
+
+        </ul>
+
+    </div>
+
+</body>
+</html>

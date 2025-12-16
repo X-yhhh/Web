@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>室外居家空间设计列表</title>
+    <style>
+        /* 基础重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #fff;
+        }
+
+        /* a) 定义一个div盒子，设置宽高、背景 */
+        .gallery-box {
+            width: 100%;
+            border-top: 5px solid black;
+            background: linear-gradient(to bottom, #cccccc 0%, #ffffff 50px);
+            padding: 50px;
+            /* 清除子元素浮动带来的高度塌陷 */
+            overflow: hidden;
+            /* 居中显示内容 */
+            display: flex;
+            justify-content: center;
+        }
+
+        /* b) 定义列表 */
+        .img-list {
+            list-style: none; /* 去掉列表默认的小圆点 */
+            width: 1150px;    /* 限制总宽度以容纳5张图 */
+            margin: 0 auto;
+        }
+
+        /* c) 给列表每一项设置背景和左浮动 */
+        .img-list li {
+            float: left;           /* 左浮动 */
+            width: 210px;          /* 单个卡片宽度 */
+            background-color: #fff;/* 卡片背景色 */
+            margin: 0 10px;        /* 卡片间距 */
+            padding: 10px;         /* 内边距，形成白边框效果 */
+            
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;    /* 内容居中 */
+        }
+
+        /* 图片样式 */
+        .img-link img {
+            width: 100%;       /* 图片撑满li的内容区域 */
+            height: auto;
+            display: block;    /* 消除图片底部间隙 */
+            margin-bottom: 15px;
+        }
+
+        /* b) 文本超链接样式 */
+        .text-link {
+            display: block;
+            text-decoration: none; /* 去掉下划线 */
+            color: #333;           /* 默认文字颜色 */
+            font-size: 14px;
+            padding-bottom: 5px;
+        }
+
+        /* b) 文本鼠标划上划下效果 */
+        .text-link:hover {
+            color: #ff6600;        /* 鼠标悬停变色 */
+            text-decoration: underline; /* 鼠标悬停加下划线 */
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="gallery-box">
+        
+        <ul class="img-list">
+            
+            <li>
+                <a href="#" class="img-link">
+                    <img src="../images/pic_1.jpg" alt="室外居家空间设计">
+                </a>
+                <a href="#" class="text-link">室外居家空间设计</a>
+            </li>
+
+            <li>
+                <a href="#" class="img-link">
+                    <img src="../images/pic_1.jpg" alt="室外居家空间设计">
+                </a>
+                <a href="#" class="text-link">室外居家空间设计</a>
+            </li>
+
+            <li>
+                <a href="#" class="img-link">
+                    <img src="../images/pic_1.jpg" alt="室外居家空间设计">
+                </a>
+                <a href="#" class="text-link">室外居家空间设计</a>
+            </li>
+
+            <li>
+                <a href="#" class="img-link">
+                    <img src="../images/pic_1.jpg" alt="室外居家空间设计">
+                </a>
+                <a href="#" class="text-link">室外居家空间设计</a>
+            </li>
+
+            <li>
+                <a href="#" class="img-link">
+                    <img src="../images/pic_1.jpg" alt="室外居家空间设计">
+                </a>
+                <a href="#" class="text-link">室外居家空间设计</a>
+            </li>
+
+        </ul>
+    </div>
+
+</body>
+</html>
