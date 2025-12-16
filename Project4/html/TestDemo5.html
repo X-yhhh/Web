@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图标导航栏</title>
+    <style>
+        /* 大盒子样式 */
+        .icon-nav {
+            width:700px;
+            height: 80px;
+            background-color: #1a1a2e;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        
+        /* 小盒子通用样式 */
+        .icon-nav span {
+            display: inline-block; /* 将span转换为行内块元素 */
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+            border: 2px solid #0f3460;
+            border-radius: 5px;
+            background-color: #16213e;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 36px;
+            transition: transform 0.3s ease;
+        }
+        
+        /* 鼠标悬停效果 */
+        .icon-nav span:hover {
+            transform: scale(1.05);
+            border-color: #4cc9f0;
+        }
+        
+        /* 每个小盒子的背景图片 */
+        .icon1 {
+            background-image: url("../images/1.png"); /* 对话图标路径 */
+        }
+        
+        .icon2 {
+            background-image: url("../images/2.png"); /* 奖章图标路径 */
+        }
+        
+        .icon3 {
+            background-image: url("../images/3.png"); /* 服务器图标路径 */
+        }
+        
+        .icon4 {
+            background-image: url("../images/4.png"); /* 用户组图标路径 */
+        }
+        
+        .icon5 {
+            background-image: url("../images/5.png"); /* 电脑图标路径 */
+        }
+        
+        .icon6 {
+            background-image: url("../images/6.png"); /* 画笔图标路径 */
+        }
+        
+        .icon7 {
+            background-image: url("../images/7.png"); /* 代码图标路径 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 图标导航栏大盒子 -->
+    <div class="icon-nav">
+        <!-- 7个图标小盒子 -->
+        <span class="icon1"></span>
+        <span class="icon2"></span>
+        <span class="icon3"></span>
+        <span class="icon4"></span>
+        <span class="icon5"></span>
+        <span class="icon6"></span>
+        <span class="icon7"></span>
+    </div>
+</body>
+</html>

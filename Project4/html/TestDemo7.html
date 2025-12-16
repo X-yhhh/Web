@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Example</title>
+    <link rel="stylesheet" href="styles7.css">
+    <style>
+        #menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 210px;
+    background: url(../images/menu-bg.jpg) no-repeat center center;
+    position: relative;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+#menu > div {
+    position: relative;
+}
+
+#menu .home {
+    width: 144px;
+    height: 58px;
+    background: url(../images/home.gif) no-repeat;
+    position: absolute;
+    left: 35%; 
+}
+#menu .home:hover {
+    background-position: 0 100%; 
+}
+#menu .home span {
+    width: 86px;
+    height: 14px;
+    background: url(../images/home-over.gif) no-repeat;
+    position: absolute;
+    left: 28px;
+    top: -20px;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+#menu .home:hover span {
+    opacity: 1; 
+    
+}
+
+#menu .about {
+    width: 131px;
+    height: 51px;
+    background: url(../images/about.gif) no-repeat;
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+}
+#menu .about:hover {
+    background-position: 0 100%; 
+}
+#menu .about span {
+    width: 40px;
+    height: 12px;
+    background: url(../images/about-over.gif) no-repeat;
+    position: absolute;
+    left: 44px;
+    top: 54px;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+#menu .about:hover span {
+    opacity: 1; 
+}
+
+#menu .rss {
+    width: 112px;
+    height: 47px;
+    background: url(../images/rss.gif) no-repeat;
+    position: absolute;
+    right: 35%; 
+}
+#menu .rss:hover {
+    background-position: 0 100%; 
+}
+#menu .rss span {
+    width: 92px;
+    height: 20px;
+    background: url(../images/rss-over.gif) no-repeat;
+    position: absolute;
+    left: 26px;
+    top: -20px;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+#menu .rss:hover span {
+    opacity: 1; 
+}
+</style>
+</head>
+<body>
+
+    <ul id="menu">
+        <div class="home">
+            <span></span>
+        </div>
+        <div class="about">
+            <span></span>
+        </div>
+        <div class="rss">
+            <span></span>
+        </div>
+    </ul>
+    
+
+</body>
+</html>
