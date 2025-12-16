@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电影</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        /* 大盒子容器 */
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            background-color: #ECE8DD;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .movie{
+            height: 40px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .header h2 {
+            color: white;
+            font-size: 32px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+        
+        /* 内容区域 */
+        .content {
+            padding: 20px 30px;
+        }
+        
+        /* 列表样式 */
+        .movie-list {
+            list-style: none;
+        }
+        
+        .movie-list li {
+            padding: 20px 0;
+            border-bottom: 1px solid #877f7f;
+            display: flex;
+        }
+        
+        .movie-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .movie-list li::before {
+            content: "";
+            display: inline-block;
+            width: 60px;
+            height: 20px;
+            background-image: url('images/star.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        /* 电影信息样式 */
+        .movie-info {
+            flex-grow: 1;
+        }
+        
+        /* 电影名称和上映时间 - 红色 */
+        .movie-title {
+            color: #ff0000;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .release-date {
+            color: #ff0000;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        /* 介绍文本 - 黑色 */
+        .movie-description {
+            color: #000000;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="movie">
+            <img src="images/movie.jpg" alt="">
+        </div>
+        <div class="content">
+            <ul class="movie-list">
+                <li>
+                    <div class="movie-info">
+                        <div class="movie-title">《变形金刚4 -绝境逢生》 —— —— （2014）</div>
+                        <p class="movie-description">芝加哥一战后，汽车人、霸天虎销声匿迹。一群科学家欲研发难以驾驭的新技术。而一个古老并强大的变形金刚出现并威胁着人类，决战一触即发</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="movie-info">
+                        <div class="movie-title">《罪恶之城2》—— —— （2014）</div>
+                        <p class="movie-description">芝加哥一战后，汽车人、霸天虎销声匿迹。一群科学家欲研发难以驾驭的新技术。而一个古老并强大的变形金刚出现并威胁着人类，决战一触即发</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="movie-info">
+                        <div class="movie-title">《加勒比海盗5》 —— —— （2014）</div>
+                        <p class="movie-description">芝加哥一战后，汽车人、霸天虎销声匿迹。一群科学家欲研发难以驾驭的新技术。而一个古老并强大的变形金刚出现并威胁着人类，决战一触即发</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设计师名片</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        
+        dl {
+            width: 250px;
+            height: 400px;
+            border: 10px solid rgb(250, 225, 229);
+            margin: 0;
+            padding: 0;
+            background-color: white; /* 面板背景设为白色 */
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* 二维码区域 */
+        .qr-section {
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px; /* 减少与边框的距离 */
+        }
+        
+        .qr-code {
+            width: 350px; /* 增大二维码尺寸 */
+            height: 300px; /* 保持正方形 */
+            /* 这里设置二维码背景图片 */
+            background-image: url('images/img.png');
+            background-size: contain; /* 确保二维码完整显示 */
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        
+        /* 文字区域 */
+        .text-section {
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        
+        dd {
+            margin: 0 0 8px 0;
+            padding: 0;
+            color: #666;
+        }
+        
+        .name {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <div class="qr-section">
+            <div class="qr-code">
+                <!-- 二维码作为背景显示 -->
+            </div>
+        </div>
+        
+        <div class="text-section">
+            <dd>
+                <span class="name">李刚</span> 传智播客
+            </dd>
+            
+            <dd>晋级：网页设计师</dd>
+            
+            <dd>案例：41个</dd>
+            
+            <dd>经验：4年</dd>
+        </div>
+    </dl>
+</body>
+</html>

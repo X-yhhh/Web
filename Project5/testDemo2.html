@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公司动态</title>
+  <style>
+    /* 全局样式 */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    /* 整体容器样式 */
+    .all {
+      width: 800px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border-top: 4px solid #ff6600; /* 顶部橙色边框 */
+    }
+    
+    /* 标题样式 */
+    h2 {
+      color: #333;
+      font-size: 24px;
+      padding: 20px 30px;
+      margin: 0;
+      border-bottom: 1px solid #e0e0e0; /* 灰色分割线 */
+    }
+    
+    /* 内容区域 */
+    .content {
+      padding: 10px 30px 30px;
+    }
+    
+    /* 列表样式 */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    li {
+      position: relative;
+      padding: 15px 0 15px 50px;
+      border-bottom: 1px dashed #e0e0e0;
+      transition: background-color 0.3s;
+    }
+    
+    li:last-child {
+      border-bottom: none;
+    }
+    
+    /* 列表项背景图像（项目符号） */
+    li:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      background-image: url('images/qipao.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    
+    /* 链接样式 */
+    a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.5;
+      display: block;
+      transition: color 0.3s, transform 0.2s;
+      padding: 5px 0;
+    }
+    
+    /* 第一条悬停效果 - 橙色 */
+    li:nth-child(1) a:hover {
+      color: #ff6600;
+      transform: translateX(5px);
+    }
+    
+    /* 第三条悬停效果 - 蓝色 */
+    li:nth-child(3) a:hover {
+      color: #0066cc;
+      transform: translateX(5px);
+    }
+    
+    /* 其他条悬停效果 - 默认灰色 */
+    li:nth-child(2) a:hover,
+    li:nth-child(4) a:hover {
+      color: #666;
+      transform: translateX(5px);
+    }
+    /* 添加悬停时背景变化 */
+    li:hover {
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="all">
+    <h2>公司动态</h2>
+    <div class="content">
+      <ul>
+        <li>
+          <a href="#">传智播客大型人才招聘会成功举行</a>
+        </li>
+        <li>
+          <a href="#">设计免费公开课-教授数码照片图像精修技巧</a>
+        </li>
+        <li>
+          <a href="#">花再多钱也买不来的UI面试神器免费送啦</a>
+        </li>
+        <li>
+          <a href="#">传智播客2014全新IT入门教程光盘免费领</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
