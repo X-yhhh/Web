@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本与段落</title>
+    <style>
+        body {
+            font-family: "SimSun", "宋体", serif;
+            line-height: 1.2;
+            color: #333;
+            margin: 0;
+            padding: 10px;
+            background-color: white;
+        }
+        
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        
+        .mapnav {
+            font-size: 12px;
+            color: #8B4513;
+            margin-bottom: 8px;
+            padding: 4px 8px 4px 60px;
+            background-image: url('../project3/images/map_bg.png');
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            background-position: left center;
+            height: 20px;
+            line-height: 20px;
+            border-radius: 1px;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: "SimSun", "宋体", serif;
+        }
+        
+        .mapnav:before {
+            content: "首页>武夷名茶";
+        }
+        
+        h1 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.2;
+            font-family: "SimSun", "宋体", serif;
+        }
+        
+        .article {
+            font-size: 12px;
+            line-height: 1.2;
+            font-family: "SimSun", "宋体", serif;
+        }
+        
+        .article p {
+            margin-bottom: 4px;
+            text-align: justify;
+        }
+        
+        .article p.title {
+            text-indent: 0;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 2px;
+            line-height: 1.2;
+            font-family: "SimSun", "宋体", serif;
+        }
+        
+        .tea-brewing-title {
+            font-family: "KaiTi", "楷体", "STKaiti", serif !important;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .article p.content {
+            text-indent: 2em;
+            padding-left: 0;
+            margin-top: 0;
+            line-height: 1.2;
+        }
+        
+        .separator-line {
+            border-bottom: 1px solid #d0d0d0;
+            margin: 8px 0;
+            width: 100%;
+        }
+        
+        .article p.list-item {
+            text-indent: 0;
+            padding-left: 2em;
+            margin-bottom: 3px;
+            line-height: 1.2;
+        }
+        
+        .publish-info {
+            font-size: 12px;
+            text-align: justify;
+            text-indent: 2em;
+            margin: 8px 0;
+            line-height: 1.2;
+            font-family: "SimSun", "宋体", serif;
+        }
+        
+        .related-links {
+            font-size: 12px;
+            margin: 8px 0;
+            line-height: 1.2;
+            font-family: "SimSun", "宋体", serif;
+        }
+        
+        .related-links p {
+            margin-bottom: 3px;
+            text-indent: 2em;
+            line-height: 1.2;
+        }
+        
+        .drink-moderation {
+            font-family: "KaiTi", "楷体", "STKaiti", serif !important;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .related-links p:nth-child(2) {
+            text-decoration: line-through;
+            text-decoration-color: #8B4513;
+            text-decoration-thickness: 1px;
+        }
+        
+        .copyright-line {
+            border-top: 1px solid #8B4513;
+            margin: 10px 0 5px 0;
+            width: 100%;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 10px;
+            color: #666;
+            line-height: 1.2;
+            font-family: "SimSun", "宋体", serif;
+        }
+        
+        p > sub {
+            font-size: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="mapnav"></div>
+        <div class="article">
+            <h1>喝茶减肥必知的几大禁忌</h1>
+            
+            <p class="content">不要以为茶水能减肥就随便喝，犯了这八个禁忌，不但减不下来，还会损害你的健康。</p>
+            
+            <p class="title">一.喜喝新茶</p>
+            <p class="content">由于新茶存放时间短，含有较多的未经氧化的多酚类、醛类及醇类等物质，对人的胃肠黏膜有较强的刺激作用，易诱发胃病。所以新茶宜少喝，存放不足半个月的新茶更应忌喝。</p>
+            
+            <p class="title">二.喝头遍茶</p>
+            <p class="content">由于茶叶在栽培与加工过程中受到农药等有害物的污染，茶叶表面总有一定的残留，所以，头遍茶有洗涤作用应弃之不喝。</p>
+            
+            <p class="title">三.空腹喝茶</p>
+            <p class="content">空腹喝茶可稀释胃液，降低消化功能，加水吸收率高，致使茶叶中不良成分大量入血，引发头晕、心慌、手脚无力等症状。</p>
+            
+            <p class="title">四.饭后喝茶</p>
+            <p class="content">茶叶中含有大量鞣酸，鞣酸可以与食物中的铁元素发生反应，生成难以溶解的新物质，时间一长引起人体缺铁，甚至诱发贫血症。正确的方法是：餐后一小时再喝茶。</p>
+            
+            <p class="title">五.发烧喝茶</p>
+            <p class="content">茶叶中含有茶碱，有升高体温的作用，发烧病人喝茶无异于"火上浇油"。</p>
+            
+            <p class="title">六.溃疡病人喝茶</p>
+            <p class="content">茶叶中的咖啡因因可促进胃酸分泌，升高胃酸浓度，诱发溃疡甚至穿孔。</p>
+            
+            <p class="title">七.经期喝茶</p>
+            <p class="content">在月经期间喝茶，特别喝浓茶，可诱发或加重经期综合征。医学专家研究发现，与不喝茶者相比，有喝茶习惯发生经期紧张症几率高出2.4倍，每天喝茶超过4杯者，增加3倍。</p>
+            
+            <p class="title">八.一成不变</p>
+            <p class="content">一年四季节令气候不同，喝茶种类宜做相应调整。春季宜喝花茶，花茶可以散发一冬淤积于体内的寒邪，促进阳气生发;夏季宜喝绿茶，绿茶性味苦寒，能清热、消暑、解毒、增强肠胃功能，促进消化、防止腹泻、皮肤疮疖感染等;秋季宜喝青茶，青茶不寒不热，能彻底消除体内的余热，恢复味甘性温，使人神清气爽;冬季宜喝红茶，红茶味甘性温，含丰富的蛋白质，有一定滋补功能。</p>
+            
+            <div class="separator-line"></div>
+            
+            <p class="title tea-brewing-title">绿茶正确冲泡方式</p>
+            <p class="list-item">1.冲泡绿茶时，水温控制在80℃～90℃左右。若是冲泡绿茶粉，以40℃～60℃左右的温开水冲泡即可。份量是2公克绿茶粉配450cc的白开水。</p>
+            <p class="list-item">2.冲泡茶叶的第一泡不要喝，冲了热水后摇晃一下即可倒掉。</p>
+            <p class="list-item">3.冲泡好的茶要在30分钟～60分钟内喝掉，否则茶里的营养成分会变得不安定。</p>
+            <p class="list-item">4.绿茶粉不可泡得太浓，否则会影响胃液的分泌，空腹时最好不要喝。</p>
+        </div>
+        
+        <p class="publish-info">本文发布在武夷名茶【永久链接】。</p>
+        
+        <div class="related-links">
+            <p class="drink-moderation">← 喝茶须适量，小心"醉茶"</p>
+            <p>缓解高血压的茶谱</p>
+        </div>
+        
+        <div class="copyright-line"></div>
+        <p class="copyright">版权所有 © 茶社</p>
+    </div>
+</body>
+</html>

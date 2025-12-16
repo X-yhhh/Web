@@ -1,0 +1,126 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "宋体", SimSun, serif;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 标题样式 - 绿色并移除下划线 */
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #008000; /* 绿色 */
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* 章节样式 */
+.section {
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section p {
+    margin-bottom: 10px;
+    text-indent: 2em;
+}
+
+/* 列表样式 - 绿色圆圈 */
+ul {
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 5px;
+    list-style-type: none;
+    position: relative;
+    padding-left: 15px;
+}
+
+ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    background-color: #008000; /* 绿色 */
+    border-radius: 50%; /* 圆形 */
+}
+
+/* 问题样式 */
+.question {
+    margin-top: 15px;
+}
+
+.question-header {
+    margin-bottom: 10px;
+}
+
+.question-number {
+    font-weight: bold;
+}
+
+.question-source {
+    margin-left: 10px;
+}
+
+/* 对话样式 */
+.dialogue {
+    margin-bottom: 10px;
+}
+
+.dialogue p {
+    margin-bottom: 5px;
+}
+
+.dialogue strong {
+    font-weight: bold;
+}
+
+/* 选项样式 */
+.options {
+    margin-bottom: 15px;
+}
+
+.options ol {
+    margin-left: 40px;
+    list-style-type: decimal;
+}
+
+.options li {
+    margin-bottom: 3px;
+}
+
+/* 解析样式 - 移除上边框 */
+.analysis {
+    border-top: none; /* 移除横线 */
+    padding-top: 0; /* 移除上内边距 */
+}
+
+.analysis p {
+    text-indent: 2em;
+    margin-bottom: 0;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多类选择器标题样式</title>
+    <style>
+        .firstTilte {
+            font-size: 18px;
+            font-weight: bold;
+            color: red;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+        
+        .firstTilte.titleBgcolor {
+            background-color: #f5f5f5;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="firstTilte">一级标题2</div>
+    <div class="firstTilte titleBgcolor">一级标题3</div>
+</body>
+</html>
