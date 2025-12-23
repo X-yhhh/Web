@@ -9,3 +9,86 @@
 Thumbs.db
 .DS_Store
 *.zip
+
+# Ignore large files commonly exceeding GitHub's 100MB limit
+
+# Disk images & archives
+*.iso
+*.img
+*.dmg
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bz2
+*.xz
+
+# Databases
+*.sql
+*.sqlite
+*.db
+*.mdb
+*.accdb
+
+# Virtual machines & containers
+*.vmdk
+*.vdi
+*.ova
+*.ovf
+*.qcow2
+
+# Executables & binaries (often large)
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.msi
+
+# Audio (some can be large)
+*.wav
+*.aiff
+*.flac
+
+# Video (already added, kept for completeness)
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.mkv
+*.webm
+*.mpeg
+*.mpg
+*.3gp
+*.m4v
+*.vob
+*.ogv
+*.ts
+
+# Design & 3D models
+*.psd
+*.ai
+*.indd
+*.sketch
+*.blend
+*.fbx
+*.obj
+*.stl
+
+# Logs and caches (can grow large)
+*.log
+logs/
+cache/
+tmp/
+temp/
+
+# Node.js / Python / etc. dependencies (often huge)
+node_modules/
+venv/
+env/
+__pycache__/
+*.pyc
+
+/videos/
