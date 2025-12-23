@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body,ul,li{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .all{
+        width: 900px;
+        margin: 20px auto;
+        height: 35px;
+        line-height: 35px;
+    }
+    .all li{
+        float: left;
+    }
+    .all a,.all span{
+        display: inline-block;
+        height: 56px;
+        float: left;
+    }
+    .one{
+        width: 22px;
+        background: url(../images/left.png);
+    }
+    .two{
+        width: 22px;
+        background: url(../images/right.png);
+    }
+    .all a:link,.all a:visited{
+        color: #FFF;
+        font-size: 18px;
+        font-weight: bold;
+        font-style: "微软雅黑";
+        text-shadow: 3px 3px 5px #333;
+        text-decoration: none;
+        background: url(../images/middle.png) repeat-x;
+        padding: 0 20px;
+    }
+    .all :hover{
+        color: #333;
+        text-shadow: 3px -3px 5px #FFF;
+    }
+</style>
+<body>
+    <ul class="all">
+        <li>
+            <span class="one"></span><a href="#">首 页</a><span class="two"></span>
+        </li>
+        <li>
+            <span class="one"></span><a href="#">公 司 产 品</a><span class="two"></span>
+        </li>
+        <li>
+            <span class="one"></span><a href="#">就 业 指 导 信 息</a><span class="two"></span>
+        </li>
+        <li>
+            <span class="one"></span><a href="#">留 言 簿</a><span class="two"></span>
+        </li>
+        <li>
+            <span class="one"></span><a href="#">添 加 友 情 链 接</a><span class="two"></span>
+        </li>
+    </ul>
+</body>
+</html>
