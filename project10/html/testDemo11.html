@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body{
+    margin: 0;
+    background: #fff;
+    text-align: center;
+    font-family: "Microsoft YaHei";
+  }
+  #box{
+    position: relative;
+    display: inline-block;
+    width: 520px;
+    height: 220px;
+    margin-top: 20px;
+  }
+  #box img{
+    width: 100%;
+    display: block;
+  }
+  #count{
+    position: absolute;
+    left: 260px;
+    top: 175px;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+  }
+  #count span{
+    font-size: 18px;
+    display: inline-block;
+    width: 33px;
+    text-align: center;
+  }
+</style>
+<body>
+<div id="box">
+  <img src="../images/flash_sale.png" alt="">
+  <div id="count">
+    <span id="h">00</span>
+    <span id="m">00</span>
+    <span id="s">00</span>
+  </div>
+</div>
+<script>
+  const end = new Date('2025-12-30T00:00:00');
+  function zero(n){
+    return n<10?'0'+n:n;
+  }
+  function tick(){
+    const diff = end - Date.now();
+    if(diff<=0){
+      document.getElementById('h').textContent = 
+      document.getElementById('m').textContent = 
+      document.getElementById('s').textContent = '00';
+      return;
+    }
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor(diff % 3600000 / 60000);
+    const s = Math.floor(diff % 60000 / 1000);
+    document.getElementById('h').textContent = zero(h);
+    document.getElementById('m').textContent = zero(m);
+    document.getElementById('s').textContent = zero(s);
+    setTimeout(tick,1000);
+  }
+  tick();
+</script>
+</body>
+</html>

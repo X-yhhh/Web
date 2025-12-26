@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>语文成绩验证</title>
+<style>
+    body{
+        margin:0;
+        font-family:"Microsoft YaHei";
+        text-align:center;
+        }
+    form{
+        display:inline-block;
+        margin-top:40px;
+        }
+    label{
+        font-size:18px;
+        }
+    input{
+        padding:6px 10px;
+        font-size:16px;
+        width:120px;
+        }
+    button{
+        margin-left:10px;
+        padding:6px 14px;
+        font-size:16px;
+
+        border: none;        
+        cursor: pointer;     
+        background: #f0f0f0;  
+        border-radius: 4px;   
+        transition: background 0.2s; 
+    }
+
+    button:hover{
+        background: #e0e0e0;
+    }
+
+    button:active{
+        background: #d0d0d0;
+    }
+
+    #msg{
+        margin-left:10px;
+        padding:4px 8px;
+        border:1px solid #ccc;
+        font-size:16px;
+        background:#f0f0f0;   
+        color:gray;           
+    }
+    #msg.red{color:red;background:#ffecec;border-color:red;}
+    #msg.green{color:green;background:#ecffec;border-color:green;}
+</style>
+</head>
+<body>
+
+<form onsubmit="return check();">
+  <label>语文：</label>
+  <input id="score" type="text" placeholder="请输入语文成绩">
+  <button type="submit">提交</button>
+  <span id="msg" class="">请输入语文成绩</span>
+</form>
+
+<script>
+function check(){
+  const v = document.getElementById('score').value.trim();
+  const msg = document.getElementById('msg');
+  msg.className='';        
+  if(v === ''){
+    msg.textContent = '语文成绩内容不能为空';
+    msg.className='red';
+  }else if(isNaN(v) || v<0 || v>100){
+    msg.textContent = '语文成绩输入不合法';
+    msg.className='red';
+  }else{
+    msg.textContent = '恭喜，输入正确';
+    msg.className='green';
+  }
+  return false;
+}
+</script>
+
+</body>
+</html>

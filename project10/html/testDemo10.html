@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            margin: 40px auto;
+            width: 320px;
+            background-color: #f9f9f9;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 16px;
+            background: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        /* 上部分：标题 */
+        .form-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 12px 0;
+        }
+
+        /* 分割线样式 */
+        .form-divider {
+            border: none;
+            border-top: 1px solid #000000;
+            margin: 0 0 12px 0;
+        }
+
+        /* 表单字段 */
+        label {
+            display: inline-block;
+            width: 70px;
+            text-align: right;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        input[type="text"] {
+            width: 160px;
+            padding: 4px;
+            border: 1px solid #aaa;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[readonly] {
+            background-color: #f5f5f5;
+        }
+
+        button {
+            margin-top: 12px;
+            padding: 5px 15px;
+            font-size: 14px;
+            background-color: #6a6b6c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin-left: 78px;
+        }
+
+        button:hover {
+            background-color: #a4a6a7;
+        }
+    </style>
+</style>
+<body>
+    <form action="">
+        <p>计算个人工资</p>
+        <hr class="form-divider">
+        <p>
+        <label for="">姓名：</label>
+        <input type="text" name="姓名" id="name" placeholder="请输入姓名"><br>
+        </p>
+        <p>
+            <label for="">应发工资：</label>
+            <input type="text" name="应发工资" id="salary" placeholder="请输入应发工资"><br>
+        </p>
+        <p>
+        <label for="">扣款：</label>
+        <input type="text" name="扣款" id="deductMoney" placeholder="请输入扣款"><br>
+        </p>
+        <p>
+        <label for="">实发工资：</label>
+        <input type="text" name="实发工资" id="realSalary" readonly><br>
+        </p>
+        <button type="button" onclick="Salary()">提交</button>
+        </p>
+    </form>
+    <script>
+        const salaryInput = document.getElementById('salary');
+        const deductInput = document.getElementById('deductMoney');
+        const realSalaryInput = document.getElementById('realSalary');
+
+        // 定义自动计算函数
+        function autoCalculate() {
+            const salary = parseFloat(salaryInput.value);
+            const deduct = parseFloat(deductInput.value);
+
+            // 只有当两个值都是有效数字时才计算
+            if (!isNaN(salary) && !isNaN(deduct)) {
+                const realSalary = salary - deduct;
+                realSalaryInput.value = realSalary;
+            } else {
+                realSalaryInput.value = ''; // 清空无效结果
+            }
+        }
+
+        // 监听输入事件：用户一输入就自动计算
+        salaryInput.addEventListener('input', autoCalculate);
+        deductInput.addEventListener('input', autoCalculate);
+
+        function Salary(){
+            const name = document.getElementById('name').value;
+            const salary = parseFloat(document.getElementById('salary').value);
+            const deductMoney = parseFloat(document.getElementById('deductMoney').value);
+            const realSalary = salary - deductMoney;
+            alert(`姓名：${name}\n应发工资：${salary}\n扣款：${deductMoney}\n实发工资：${realSalary}`);
+            document.getElementById('realSalary').value = realSalary;
+            if (isNaN(salary) || isNaN(deductMoney)) {
+                alert("请输入有效的数字！");
+                return;
+            }
+        }
+    </script>
+</body>
+</html>
