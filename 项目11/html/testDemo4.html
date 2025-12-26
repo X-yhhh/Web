@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>自动轮播焦点图</title>
+    <script src="../jquery-1.8.1.js"></script>
+    <style>
+.slider {
+    width: 800px;
+    height: 450px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.slider-imgs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-imgs li {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider-imgs li.active {
+    display: block;
+}
+
+.slider-imgs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 80px;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-btn.left {
+    left: 0;
+}
+
+.slider-btn.right {
+    right: 0;
+}
+
+.slider-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+    line-height: 60px;
+    z-index: 10;
+}
+
+.slider-info .text {
+    float: left;
+    font-size: 20px;
+}
+
+.slider-dots {
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slider-dots li {
+    float: left;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 24px 8px 0;
+    cursor: pointer;
+}
+
+.slider-dots li.active {
+    background: #00a1ff;
+}
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <ul class="slider-imgs">
+            <li class="active">
+                <img src="../images/0.jpg" alt="母狮子">
+            </li>
+            <li>
+                <img src="../images/1.jpg" alt="图片2">
+            </li>
+            <li>
+                <img src="../images/2.jpg" alt="图片3">
+            </li>
+            <li>
+                <img src="../images/3.jpg" alt="图片4">
+            </li>
+        </ul>
+
+        <span class="slider-btn left">&lt;</span>
+        <span class="slider-btn right">&gt;</span>
+
+        <div class="slider-info">
+            <div class="text">母狮子好啊！！</div>
+            <ul class="slider-dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+
+            let $imgs = $(".slider-imgs li"); 
+            let $dots = $(".slider-dots li"); 
+            let $text = $(".slider-info .text"); 
+            let currentIndex = 0; 
+            let timer = null; 
+            let imgTexts = ["母狮子好啊！！", "图片2标题", "图片3标题", "图片4标题"]; 
+            let imgUrls = ["0.jpg", "1.jpg", "2.jpg", "3.jpg"]; 
+
+
+
+            function changeImg(index) {
+
+                $imgs.eq(currentIndex).removeClass("active");
+                $dots.eq(currentIndex).removeClass("active");
+
+
+                currentIndex = index;
+                $imgs.eq(currentIndex).addClass("active");
+                $dots.eq(currentIndex).addClass("active");
+
+                $text.text(imgTexts[currentIndex]);
+            }
+
+
+            $(".slider-btn.right").click(function() {
+                let nextIndex = currentIndex + 1;
+
+                if (nextIndex >= $imgs.length) {
+                    nextIndex = 0;
+                }
+                changeImg(nextIndex);
+            });
+
+
+            $(".slider-btn.left").click(function() {
+                let prevIndex = currentIndex - 1;
+
+                if (prevIndex < 0) {
+                    prevIndex = $imgs.length - 1;
+                }
+                changeImg(prevIndex);
+            });
+
+            $dots.mouseover(function() {
+
+                let dotIndex = $(this).index();
+                changeImg(dotIndex);
+            });
+
+
+            function autoPlay() {
+                timer = setInterval(function() {
+
+                    $(".slider-btn.right").click();
+                }, 3000); 
+            }
+            autoPlay(); 
+
+            $(".slider").mouseenter(function() {
+                clearInterval(timer);
+            });
+
+            $(".slider").mouseleave(function() {
+                autoPlay();
+            });
+        });
+    </script>
+</body>
+</html>

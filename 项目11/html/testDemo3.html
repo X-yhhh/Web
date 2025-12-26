@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>统计选中复选框数量</title>
+
+    <script src="../jquery-1.8.1.js"></script>
+    <script>
+        $(function() {
+            $("#countBtn").click(function() {
+                let checkedNum = $("input[type='checkbox']:checked").length;
+                alert("选中的个数为：" + checkedNum);
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="checkbox"> 
+    <input type="checkbox"> 
+    <input type="checkbox"> 
+    <button id="countBtn">测试选中的个数</button>
+</body>
+</html>
