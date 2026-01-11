@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="time" value="10">
+    <button id="startBtn" onclick="count()">开始</button>
+    <script>
+        function count(){
+        const timeInput = document.getElementById("time");
+        const startBtn = document.getElementById("startBtn");
+        timeInput.readOnly = true;
+        startBtn.disabled = true;
+        
+        let seconds = parseInt(timeInput.value);
+        let count = setInterval(function(){
+            seconds--;
+            timeInput.value = seconds;
+            if(seconds <= 0){
+                clearInterval(count);
+                alert("时间到!");
+                timeInput.readOnly = false;
+                startBtn.disabled = false;
+            }
+        },1000)
+    }
+    </script>
+</body>
+</html>

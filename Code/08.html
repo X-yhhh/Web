@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    输入第一个数：<input type="text" id="num1">
+    输入第二个数：<input type="text" id="num2">
+    <button id="sum" onclick="sum()">求和</button>
+    <script>
+        const num1Input = document.getElementById('num1');
+        const num2Input = document.getElementById('num2');
+
+        function sum(){
+            const num1 = parseInt(num1Input.value);
+            const num2 = parseInt(num2Input.value);
+            const sum = num1 + num2;
+            alert(sum);
+        }
+    </script>
+</body>
+</html>

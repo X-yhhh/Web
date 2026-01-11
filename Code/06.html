@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    span{
+        color: red;
+        display: none;
+    }
+</style>
+<body>
+    用户名：<input type="text" id="username" pattern=".{6,}">
+    <span class="error">用户名长度至少6位!</span><br>
+    密码：<input type="password" id="password" pattern=".{8,}">
+    <span class="error">密码长度至少8位!</span><br>
+    确认密码：<input type="password" id="confirmPassword" pattern=".{8,}">
+    <span class="error">两次密码不一致!</span><br>
+    邮箱：<input type="email" id="email" pattern="^\w+@\w+\.\w+$">
+    <span class="error">邮箱格式不正确!</span><br>
+    手机号：<input type="tel" id="tel" pattern="^1\d{10}$">
+    <span class="error">手机号码不正确!</span><br>
+    <button type="submit">提交</button>
+    <script>
+        document.getElementById('username').oninput = function(){
+            const error = this.nextElementSibling;
+            error.style.display = this.validity.valid ? "none" : "inline";
+        };
+        document.getElementById('password').oninput = function(){
+            const error = this.nextElementSibling;
+            error.style.display = this.validity.valid ? "none" : "inline";
+
+            if (document.getElementById('confirmPassword').value){
+                document.getElementById('confirmPassword').oninput();
+            }
+        };
+        document.getElementById('confirmPassword').oninput = function(){
+            const error = this.nextElementSibling;
+            const password = document.getElementById('password').value;
+            error.style.display = (this.value && this.value == password) ? "none" : "inline";
+        };
+        document.getElementById('email').oninput = function(){
+            const error = this.nextElementSibling;
+            error.style.display = this.validity.valid ? "none" : "inline";
+        };
+        document.getElementById('tel').oninput = function(){
+            const error = this.nextElementSibling;
+            error.style.display = this.validity.valid ? "none" : "inline";
+        };
+    </script>
+</body>
+</html>
